@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="lt-head">
+        <title>Live Language Translation</title>
+    </div>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="translation-container">
+        <h2>Live Language Translation</h2>
+        <div id="sl-main">
+            <label for="sourceLang">Source Language:</label>
+            <select id="sourceLang" name="sourceLang">
+                <option>English</option>
+                <option>Arabic</option>
+                <option>Urdu</option>
+                <option>Hindi</option>
+                <option>French</option>
+                <option>Telugu</option>
+                <!-- add more languages here -->
+            </select>
+        </div>
+        <div id="tl-main">
+            <label for="targetLang">Target Language:</label>
+            <select id="targetLang" name="targetLang">
+                <option>Spanish</option>
+                <option>Arabic</option>
+                <option>English</option>
+                <option>Urdu</option>
+                <option>Hindi</option>
+                <option>French</option>
+                <option>Telugu</option>
+                <!-- add more languages here -->
+            </select><br>
+        </div>
+        <div id="st-enter">
+            <label for="sourceText">Enter Text:</label>
+            <input type="text" id="sourceText" name="sourceText" placeholder="Type here..."><br>
+        </div>
+        <button type="button" onclick="translateText()">Translate</button>
+
+        <div id="targetlang-container">
+            <label for="targetText">Translated Text:</label>
+            <textarea id="targetText" name="translatedText" rows="4" readonly></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
