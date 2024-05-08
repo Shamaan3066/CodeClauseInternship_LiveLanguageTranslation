@@ -1,4 +1,4 @@
-const apiKey = ''; // Use openAI API Key
+const apiKey = process.env.openaiKEY; // Use openAI API Key
 
 async function translateText() {
 
