@@ -1,11 +1,12 @@
-const apiKey = ; // Use openAI API Key
+import { openaiKEY } from './config.js';
 
 async function translateText() {
+    const apiKey = openaiKEY;
 
     const sourceText = document.querySelector('#sourceText').value;
     const targetLang = document.querySelector('#targetLang').value;
     const sourceLang = document.querySelector('#sourceLang').value;
-    const targetText = document.querySelector('#targetText');    
+    const targetText = document.querySelector('#targetText');
 
     const options = {
         method: 'POST',
@@ -24,9 +25,10 @@ async function translateText() {
                     word to be converted is ${sourceText}`,
                 }
             ],
-            max_tokens: 20
+            max_tokens: 200
         })
-    }
+    };
+
     try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', options);
         const data = await response.json();
@@ -35,3 +37,6 @@ async function translateText() {
         console.log(error);
     }
 }
+
+// Add event listener to the translate button
+document.getElementById('translateButton').addEventListener('click', translateText);

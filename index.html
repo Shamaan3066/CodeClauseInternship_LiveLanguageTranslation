@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div id="lt-head">
-        <title>Live Language Translation</title>
-    </div>
+    <title>Live Language Translation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -42,7 +40,7 @@
             <label for="sourceText">Enter Text:</label>
             <input type="text" id="sourceText" name="sourceText" placeholder="Type here..."><br>
         </div>
-        <button type="button" onclick="translateText()">Translate</button>
+        <button type="button" id="translateButton">Translate</button>
 
         <div id="targetlang-container">
             <label for="targetText">Translated Text:</label>
@@ -50,7 +48,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
 </body>
 
 </html>
