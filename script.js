@@ -1,5 +1,7 @@
-require('dotenv').config();
-const apiKey = process.env.openaiKEY; // Use openAI API Key
+// require('dotenv').config();
+// const apiKey = process.env.openaiKEY; // Use openAI API Key
+openaiKEY = '';
+const apiKEY = openaiKEY;
 
 async function translateText() {
 
