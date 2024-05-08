@@ -1,5 +1,4 @@
 // import { openaiKEY } from './config.js';
-const openaiKEY;
 
 async function translateText() {
     const apiKey = openaiKEY;
